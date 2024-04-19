@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Factorial</title>
+</head>
+<body>
+    <h1>Calculadora de Factorial</h1>
+    <label for="number">Introduce un número:</label>
+    <input type="number" id="number" min="0">
+    <button onclick="calculateFactorial()">Calcular Factorial</button>
+    <h2>Resultado:</h2>
+    <div id="result"></div>
+
+    <script>
+        function calculateFactorial() {
+            var n = document.getElementById('number').value;
+            n = parseInt(n);
+
+            if (n < 0 || n !== n) { 
+                document.getElementById('result').innerHTML = 'Por favor, introduce un número entero no negativo.';
+                return;
+            }
+
+            if (n === 0 || n === 1) {  // Casos base para 0 y 1.
+                document.getElementById('result').innerHTML = `El factorial de ${n} es 1.`;
+                return;
+            }
+
+            var factorial = 1;
+            for (var i = 2; i <= n; i++) {
+                factorial *= i;
+            }
+
+            document.getElementById('result').innerHTML = `El factorial de ${n} es ${factorial}.`;
+        }
+    </script>
+</body>
+</html>

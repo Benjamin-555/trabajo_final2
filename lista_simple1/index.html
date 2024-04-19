@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas pendientes</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #tareas {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #tareas li {
+            margin-bottom: 10px;
+        }
+
+        #tareas input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de tareas pendientes</h1>
+
+    <input type="text" id="nuevaTarea" placeholder="Agregar tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+
+    <ul id="tareas"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
